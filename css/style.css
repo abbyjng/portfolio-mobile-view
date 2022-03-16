@@ -161,3 +161,31 @@ p {
 #moolah-bought {
   grid-area: wide;
 }
+
+.contact-box {
+  padding: 15px;
+  background-color: #fff0c8;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  margin: 5px 0;
+}
+
+textarea {
+  width: 98%;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #edce80;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.submit-button:hover {
+  background-color: #e6c268;
+}
