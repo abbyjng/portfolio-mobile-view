@@ -199,12 +199,11 @@ p {
   margin: auto;
 }
 
-.img-set-grid img:active {
-  -webkit-user-select: none;
+/* .img-set-grid img:active {
   -webkit-touch-callout: none;
-  -khtml-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   position: fixed;
   left: 50%;
@@ -215,7 +214,7 @@ p {
   max-width: 90%;
   max-height: 90%;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .img-set-grid {
   grid-template:
@@ -324,7 +323,7 @@ textarea {
     display: none;
   }
 
-  .img-set-grid img:active {
+  /* .img-set-grid img:active {
     -webkit-user-select: text;
     -webkit-touch-callout: default;
     -khtml-user-select: text;
@@ -338,5 +337,5 @@ textarea {
     background-color: transparent;
     max-height: 100%;
     width: 90%;
-  }
+  } */
 }
