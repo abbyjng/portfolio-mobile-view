@@ -97,6 +97,7 @@ h2 {
 
 body {
   background-image: url("../images/honeycomb.jpg");
+  background-color: #fff;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -199,7 +200,11 @@ p {
 }
 
 .img-set-grid img:active {
-  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -319,6 +324,11 @@ textarea {
   }
 
   .img-set-grid img:active {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
     position: static;
     transform: none;
     margin: auto;
