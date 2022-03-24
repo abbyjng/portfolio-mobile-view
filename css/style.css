@@ -48,7 +48,8 @@ nav a:visited {
 }
 
 nav a:hover {
-  background-color: #fadf9a;
+  animation: tabAnimation 2s;
+  animation-fill-mode: forwards;
 }
 
 nav a.current {
@@ -260,7 +261,22 @@ textarea {
   background-color: #e6c268;
 }
 
+@keyframes tabAnimation {
+  from {
+    font-size: 0px;
+    background-color: #edce80;
+  }
+  to {
+    font-size: 12px;
+    background-color: #fadf9a;
+  }
+}
+
 @media screen and (min-width: 650px) {
+  .mobile-only {
+    display: none;
+  }
+
   #header-name {
     display: block;
     font-weight: bold;
@@ -285,6 +301,11 @@ textarea {
 
   nav a {
     font-size: 16px;
+  }
+
+  nav a:hover {
+    animation: none;
+    background-color: #fadf9a;
   }
 
   i {
@@ -338,4 +359,10 @@ textarea {
     max-height: 100%;
     width: 90%;
   } */
+}
+
+@media (prefers-reduced-motion) {
+  nav a:hover {
+    animation: none;
+  }
 }
