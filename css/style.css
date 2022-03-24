@@ -34,6 +34,7 @@ nav {
 nav a {
   padding: 20px 0;
   font-size: 0;
+  text-align: center;
 }
 
 i {
@@ -91,10 +92,11 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Rubik", Arial, Helvetica, sans-serif;
+  margin: 15px 0 5px 0;
 }
 
 body {
-  background-image: url("../images/honeycombHeader.jpg");
+  background-image: url("../images/honeycomb.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,6 +133,8 @@ p {
 .cover-img {
   width: 100%;
   min-width: 150px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 #moolah-layout {
@@ -154,6 +158,7 @@ p {
   background-color: #ffeab5;
   color: #000;
   text-decoration: none;
+  text-align: center;
 }
 
 .link-bar a:hover {
@@ -193,6 +198,39 @@ p {
   margin: auto;
 }
 
+.img-set-grid img:active {
+  -webkit-touch-callout: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 1000px;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-set-grid {
+  grid-template:
+    "tall wide wide" auto
+    "tall med med" auto
+    "tall med med" auto
+    ". . ." auto / 3fr 2fr 2fr;
+}
+
+#moolah-log {
+  grid-area: tall;
+}
+
+#moolah-history {
+  grid-area: med;
+}
+
+#moolah-bought {
+  grid-area: wide;
+}
+
 .contact-box {
   padding: 15px;
   background-color: #fff0c8;
@@ -221,12 +259,14 @@ textarea {
   background-color: #e6c268;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 650px) {
   #header-name {
     display: block;
     font-weight: bold;
     font-size: 20px;
     padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   #header-name:hover {
@@ -274,23 +314,17 @@ textarea {
     flex-wrap: nowrap;
   }
 
-  .img-set-grid {
-    grid-template:
-      "tall wide wide" auto
-      "tall med med" auto
-      "tall med med" auto
-      ". . ." auto / 3fr 2fr 2fr;
+  #expand-text {
+    display: none;
   }
 
-  #moolah-log {
-    grid-area: tall;
-  }
-
-  #moolah-history {
-    grid-area: med;
-  }
-
-  #moolah-bought {
-    grid-area: wide;
+  .img-set-grid img:active {
+    position: static;
+    transform: none;
+    margin: auto;
+    padding: 5px;
+    background-color: transparent;
+    max-height: 100%;
+    width: 90%;
   }
 }
